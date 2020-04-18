@@ -87,6 +87,7 @@ try {
     echo BR;
 } catch (Exception $e) {
     echo 'Be careful ! Release your park brake!';
+    $porsche->changePositionParkBrake();
     echo $porsche->setParkBrake(false);
     echo BR;
 } finally {
