@@ -83,38 +83,14 @@ CONST BR ='</br>';
 $porsche->setParkBrake(true);
 
 try {
-    echo $porsche->start();
+    $porsche->start();
     echo BR;
 } catch (Exception $e) {
-    echo $porsche->changePositionParkBrake();
+    echo 'Be careful ! Release your park brake!';
+    echo $porsche->setParkBrake(false);
     echo BR;
 } finally {
     echo 'Ma voiture roule comme un donut';
     echo BR;
 }
 echo $porsche->getCurrentSpeed();
-
-$porsche->setParkBrake(false);
-
-try {
-    echo $porsche->start();
-    echo BR;
-} catch (Exception $e) {
-    echo $porsche->changePositionParkBrake();
-    echo BR;
-} finally {
-    echo 'Ma voiture roule comme un donut';
-    echo BR;
-}
-
-echo $porsche->getCurrentSpeed();
-
-
-
-
-
-
-
-
-
-
