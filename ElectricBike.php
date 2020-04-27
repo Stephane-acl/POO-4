@@ -8,6 +8,12 @@ class ElectricBike extends Vehicle implements RechargeableInterface
 
     private $energyLevel;
 
+    public function __construct(string $color, int $nbSeats)
+    {
+        parent::__construct('Purple', 1);
+
+    }
+
     public function getEnergyLevel(): int
     {
         return $this->energyLevel;
