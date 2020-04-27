@@ -1,7 +1,7 @@
 <?php
-// Vehicle.php
+require_once 'LightableInterface.php';
 
-class Vehicle
+class Vehicle implements LightableInterface
 {
     /**
      * @var string
@@ -92,6 +92,16 @@ class Vehicle
     public function setNbWheels(int $nbWheels): void
     {
         $this->nbWheels = $nbWheels;
+    }
+
+    public function switchOn()
+    {
+        return true;
+    }
+
+    public function switchOff()
+    {
+        return false;
     }
 
 }

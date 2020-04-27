@@ -1,8 +1,9 @@
 <?php
 
 require_once 'Vehicle.php';
+require_once 'LightableInterface.php';
 
-class Truck extends Vehicle
+class Truck extends Vehicle implements LightableInterface
 {
 
     /**
@@ -60,6 +61,16 @@ class Truck extends Vehicle
         } elseif ($stock == $load) {
             return "full";
         }
+    }
+
+    public function switchOn()
+    {
+        return true;
+    }
+
+    public function switchOff()
+    {
+        return false;
     }
 
 }
