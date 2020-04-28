@@ -160,5 +160,14 @@ try {
 }
 echo $porsche->getCurrentSpeed();
 
-
 var_dump($peugeot);
+
+
+//QUEST POO 6
+
+require_once 'Speedometer.php';
+
+echo Speedometer::convertKmToMiles(10);
+
+
+
