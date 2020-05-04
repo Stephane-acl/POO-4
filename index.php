@@ -169,5 +169,5 @@ require_once 'Speedometer.php';
 
 echo Speedometer::convertKmToMiles(10);
 
-
+echo Speedometer::convertMilestoKm(10);
 
